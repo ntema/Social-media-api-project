@@ -9,7 +9,7 @@ const loginAuthContoller = async (req, res) =>{
             res.status(400).json('invalid username and password')
         }
 
-        return res.status(200).json(login)
+        return res.status(200).json(user)
     } catch (err) {
         res.status(500).json(err)
     }

@@ -24,7 +24,8 @@ app.use('/api/auth', require('./routes/authRoutes/userRegisterRoute'))
 app.use('/api/auth', require('./routes/authRoutes/userLoginRoute'))
 app.use('/api/users', require('./routes/userRoutes/getUserRoute'))
 app.use('/api/users', require('./routes/userRoutes/followUserRoute'))
-
+app.use('/api/users', require('./routes/userRoutes/updateUserRoute'))
+app.use('/api/users', require('./routes/userRoutes/deleteUserRoute'))
 
 
 

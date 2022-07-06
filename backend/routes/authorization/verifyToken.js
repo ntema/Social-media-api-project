@@ -7,7 +7,7 @@ const verifyToken = (req, res, next) => {
             token = req.headers.authorization.split(' ')[1]
             jwt.verify(token,process.env.JWT_SECRET, (err, decoded)=> {
                 if(err) res.status(400).json({error:{message:'invalid token, failed to authorize, access denied'}})
-                req.decodedUserToken = decoded
+                req.decodedUser = decoded
                 next()
             })
         }

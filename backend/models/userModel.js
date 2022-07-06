@@ -22,7 +22,7 @@ const userSchema = new mongoose.Schema({
         default:[]
     },
     followings:{
-        type:Array,
+        type: [{following:{type: mongoose.Schema.Types.ObjectId,ref:'User'}}],
         default:[]
     },
     profilePicture:{
@@ -38,4 +38,12 @@ const userSchema = new mongoose.Schema({
     timestamps: true
 })
 
+const populateUserFollows = function (next) {
+    this.populate('followers.follower')
+    this.populate('followings.following')
+    next()
+}
+userSchema.pre('findOne', populateUserFollows)
+.pre('find', populateUserFollows)
+.pre('findOneAndUpdate', populateUserFollows)
 module.exports = mongoose.model('User',userSchema)

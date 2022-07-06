@@ -10,6 +10,8 @@ const loginAuthContoller = async (req, res) =>{
         if(!isPassword){
             res.status(400).json('invalid username and password')
         }
+        console.log(isPassword)
+        console.log(password)
         const generateToken = jwt.sign({id:user._id},
             process.env.JWT_SECRET,
             {

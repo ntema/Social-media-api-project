@@ -31,7 +31,7 @@ const followUserController = async(req, res) => {
             res.status(500).json(err.message)
         }
     }else{
-        res.status(400).json(`you can't follow self`)
+        res.status(400).json(`you can't follow yourself`)
     }
       
 }

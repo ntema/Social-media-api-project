@@ -1,7 +1,7 @@
 # Social-media-api-project
 I built this platform(backend) as a solution in the bootcamp academy i attended(smart hub academy)
 so that students can form a virtual community of their stack of interest even after graduation. Project still in progress.
-# Functionalities implemented
+# Features implemented
 >user signup routes
 
 >user sign in routes
@@ -12,7 +12,7 @@ so that students can form a virtual community of their stack of interest even af
 
 >follow user route
 
-# Functionalities to be implemented
+# Features to be implemented
 
 >create post route
 
